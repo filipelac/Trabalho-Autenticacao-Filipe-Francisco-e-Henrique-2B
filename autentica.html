@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de login</title>
+
+    <style>
+    
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+
+        *{
+           margin: 0;
+           padding: 0;
+           box-sizing: border-box;
+           font-family: 'poppins', sans-serif;
+        }
+
+        body{
+            background-image: url(../Autenticação/chamcham.jpg), linear-gradient(-90deg, rgb(19, 52, 151), rgb(11, 151, 211));
+            background-size: cover;
+            width: 100vw;
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        input{
+            padding: 15px;
+            border-color:rgb(204, 207, 207);
+            outline: none;
+            font-size: 15px;
+            border-radius: 15px;
+        }
+
+        input:hover{
+            background-color: rgba(255, 255, 255, 0.548);
+            cursor: pointer;
+        }
+
+        h1{
+            color:rgb(0, 0, 0);
+            margin-top: 10px;
+        }
+        
+        form{
+            background-color: rgba(243, 243, 243, 0.872);
+            padding: 10px;
+            width: 350px;
+            height: 450px;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            border-radius: 10px;
+            box-shadow: 0 0 20px 0 darkgrey;
+            margin-top: 80px;
+            transition: .5s;
+            width: 300px;
+            height: 400px;
+            align-items: center;
+            justify-content: center;
+        }
+        input[type="text"], input[type="password"] {
+            border: none;
+            margin-top: 1px;
+            border-radius: 20px;
+            padding: 8px 0 8px 35px;
+            outline: none;
+            width: 100%;
+        }
+
+        input[type="submit"] {
+            background: #000000;
+            color: white;
+            margin-top: 30px;
+            border-radius: 20px;
+            width: 100%;
+            border: none;
+            outline: none;
+            padding: 8px 0 8px 15px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+    </style>
+    
+</head>
+<body>
+    
+    <form>
+
+        <center>
+            <h1>Logar</h1><br><hr><br>
+         <input type="text" placeholder="Login" id="login">
+         <br><br>
+         <input type="password" placeholder="Senha" id="senha">
+         <br><br>
+         <input type="submit" onclick="confirmar(); return false">
+
+     </form>
+
+    <script>
+    function confirmar(){
+    var login, senha;
+
+    login = document.getElementById("login").value;
+    senha = document.getElementById("senha").value;
+
+    if (login == "lipe" && senha == "123"){
+        alert("você logou como Filipe");
+        location.href = "pag1.html";
+    }
+    else if(login == "fran" && senha == "1234"){
+        alert("você logou como Francisco");
+        location.href = "pag3.html";
+    }
+    else if(login == "rick" && senha == "12345"){
+        alert("você logou como Henrique");
+        location.href = "pag2.html";
+    }
+    else{
+        alert("Login ou senha inválidos");
+    }
+}
+    </script>
+    
+</body>
+</html>
